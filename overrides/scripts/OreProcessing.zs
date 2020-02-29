@@ -1,10 +1,10 @@
-#priority 999
+#priority 998
 
 ##imports
-import mods.actuallyadditions.Crusher;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
+import mods.actuallyadditions.Crusher as AACrusher;
 import mods.appliedenergistics2.Grinder;
 import mods.extrautils2.Resonator;
 import mods.integrateddynamics.DryingBasin;
@@ -33,6 +33,9 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material>, 1.0, <thermalfoun
 furnace.remove(<ore:ingotIron>, <magneticraft:rocky_chunks>);
 Melting.removeRecipe(<liquid:iron>, <magneticraft:rocky_chunks>);
 HighOven.removeMeltingOverride(<liquid:iron>, <magneticraft:rocky_chunks>);
+AACrusher.removeRecipe(<thermalfoundation:material>);
+AACrusher.addRecipe(<ic2:crushed:2>*2, <minecraft:iron_ore>);
+AACrusher.addRecipe(<thermalfoundation:material>, <minecraft:iron_ingot>);
 
 //gold
 furnace.remove(<ore:ingotGold>, <minecraft:gold_ore>);
@@ -47,6 +50,9 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material:1>, 1.0, <thermalfo
 furnace.remove(<ore:ingotGold>, <magneticraft:rocky_chunks:1>);
 Melting.removeRecipe(<liquid:gold>, <magneticraft:rocky_chunks:1>);
 HighOven.removeMeltingOverride(<liquid:gold>, <magneticraft:rocky_chunks:1>);
+AACrusher.removeRecipe(<thermalfoundation:material:1>);
+AACrusher.addRecipe(<ic2:crushed:1>*2, <minecraft:gold_ore>);
+AACrusher.addRecipe(<thermalfoundation:material:1>, <minecraft:gold_ingot>);
 
 //copper
 furnace.remove(<ore:ingotCopper>, <thermalfoundation:ore>);
@@ -61,6 +67,9 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material:64>, 1.0, <thermalf
 furnace.remove(<ore:ingotCopper>, <magneticraft:chunks:2>);
 Melting.removeRecipe(<liquid:copper>, <magneticraft:chunks:2>);
 HighOven.removeMeltingOverride(<liquid:copper>, <magneticraft:chunks:2>);
+AACrusher.removeRecipe(<thermalfoundation:material:64>);
+AACrusher.addRecipe(<ic2:crushed>*2, <thermalfoundation:ore>);
+AACrusher.addRecipe(<thermalfoundation:material:64>, <thermalfoundation:material:128>);
 
 //tin
 furnace.remove(<ore:ingotTin>, <thermalfoundation:ore:1>);
@@ -75,6 +84,9 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material:65>, 1.0, <thermalf
 furnace.remove(<ore:ingotTin>, <magneticraft:rocky_chunks:13>);
 Melting.removeRecipe(<liquid:tin>, <magneticraft:rocky_chunks:13>);
 HighOven.removeMeltingOverride(<liquid:tin>, <magneticraft:rocky_chunks:13>);
+AACrusher.removeRecipe(<thermalfoundation:material:65>);
+AACrusher.addRecipe(<ic2:crushed:5>*2, <thermalfoundation:ore:1>);
+AACrusher.addRecipe(<thermalfoundation:material:65>, <thermalfoundation:material:129>);
 
 //silver
 furnace.remove(<ore:ingotSilver>, <thermalfoundation:ore:2>);
@@ -89,6 +101,9 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material:66>, 1.0, <thermalf
 furnace.remove(<ore:ingotSilver>, <magneticraft:rocky_chunks:12>);
 Melting.removeRecipe(<liquid:silver>, <magneticraft:rocky_chunks:12>);
 HighOven.removeMeltingOverride(<liquid:silver>, <magneticraft:rocky_chunks:12>);
+AACrusher.removeRecipe(<thermalfoundation:material:66>);
+AACrusher.addRecipe(<ic2:crushed:4>*2, <thermalfoundation:ore:2>);
+AACrusher.addRecipe(<thermalfoundation:material:66>, <thermalfoundation:material:130>);
 
 //lead
 furnace.remove(<ore:ingotLead>, <thermalfoundation:ore:3>);
@@ -103,6 +118,9 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material:67>, 1.0, <thermalf
 furnace.remove(<ore:ingotLead>, <magneticraft:rocky_chunks:3>);
 Melting.removeRecipe(<liquid:lead>, <magneticraft:rocky_chunks:3>);
 HighOven.removeMeltingOverride(<liquid:lead>, <magneticraft:rocky_chunks:3>);
+AACrusher.removeRecipe(<thermalfoundation:material:67>);
+AACrusher.addRecipe(<ic2:crushed:3>*2, <thermalfoundation:ore:3>);
+AACrusher.addRecipe(<thermalfoundation:material:67>, <thermalfoundation:material:131>);
 
 //aluminum
 furnace.remove(<ore:ingotAluminum>, <thermalfoundation:ore:4>);
@@ -114,6 +132,9 @@ Grinder.addRecipe(<jaopca:item_crushedaluminium>, <thermalfoundation:ore:4>, 4);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:7>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:7>, 1.0, <magneticraft:chunks:7>, 0.15, <minecraft:cobblestone>, true);
 furnace.remove(<ore:ingotAluminum>, <magneticraft:rocky_chunks:7>);
+AACrusher.removeRecipe(<thermalfoundation:material:68>);
+AACrusher.addRecipe(<jaopca:item_crushedaluminium>*2, <thermalfoundation:ore:4>);
+AACrusher.addRecipe(<thermalfoundation:material:68>, <thermalfoundation:material:132>);
 
 #tier 2
 //nickel
@@ -128,12 +149,31 @@ Squeezer.removeRecipesWithOutput(<thermalfoundation:material:69>, 1.0, <thermalf
 furnace.remove(<ore:ingotNickel>, <magneticraft:rocky_chunks:10>);
 Melting.removeRecipe(<liquid:nickel>, <magneticraft:rocky_chunks:10>);
 HighOven.removeMeltingOverride(<liquid:nickel>, <magneticraft:rocky_chunks:10>);
+AACrusher.removeRecipe(<thermalfoundation:material:69>);
+AACrusher.addRecipe(<jaopca:item_crushednickel>*2, <thermalfoundation:ore:5>);
+AACrusher.addRecipe(<thermalfoundation:material:69>, <thermalfoundation:material:133>);
 
 //black quartz
-furnace.remove(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>);
+furnace.remove(<actuallyadditions:item_misc:5>);
 CrushingTable.addRecipe(<actuallyadditions:block_misc:3>, <actuallyadditions:item_dust:7>, true);
 Resonator.add(<actuallyadditions:item_misc:5>, <actuallyadditions:item_dust:7>, 800);
-Crusher.removeRecipe(<actuallyadditions:item_misc:5>);
+AACrusher.removeRecipe(<actuallyadditions:item_misc:5>);
+AACrusher.addRecipe(<actuallyadditions:item_dust:7>*2, <actuallyadditions:block_misc:3>);
+AACrusher.addRecipe(<actuallyadditions:item_dust:7>, <actuallyadditions:item_misc:5>);
+
+//certus quartz
+AACrusher.removeRecipe(<appliedenergistics2:material>);
+Grinder.removeRecipe(<appliedenergistics2:quartz_ore>);
+Resonator.add(<appliedenergistics2:material>, <appliedenergistics2:material:2>, 1200);
+AACrusher.addRecipe(<appliedenergistics2:material:2>*2, <appliedenergistics2:quartz_ore>);
+AACrusher.addRecipe(<appliedenergistics2:material:2>, <appliedenergistics2:material>);
+
+//nether quartz
+AACrusher.removeRecipe(<minecraft:quartz>);
+Grinder.removeRecipe(<minecraft:quartz_ore>);
+Resonator.add(<minecraft:quartz>, <appliedenergistics2:material:3>, 1200);
+AACrusher.addRecipe(<appliedenergistics2:material:3>*2, <minecraft:quartz_ore>);
+AACrusher.addRecipe(<appliedenergistics2:material:3>, <minecraft:quartz>);
 
 Squeezer.removeRecipesWithOutput(<thermalfoundation:material:70>, 1.0, <thermalfoundation:material:70>, 0.75, null);
 Squeezer.removeRecipesWithOutput(<thermalfoundation:material:72>, 1.0, <thermalfoundation:material:72>, 0.75, null);

@@ -4,6 +4,9 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import mods.artisanworktables.builder.RecipeBuilder;
 import mods.forestry.Carpenter;
+import mods.forestry.Centrifuge;
+import mods.tconstruct.Alloy;
+import mods.tconstruct.Melting;
 
 ##vars
 val plateSteel = <ore:plateSteel>;
@@ -26,6 +29,8 @@ val cutter = <ore:artisansCutters>;
 val carver = <ore:artisansCarver>;
 val spanner = <ore:artisansSpanner>;
 val driver = <ore:artisansDriver>;
+val beaker = <ore:artisansBeaker>;
+val mortar = <ore:artisansMortar>;
 
 ##recipes
 //artisan tables
@@ -89,6 +94,16 @@ RecipeBuilder.get("mason")
 	])
 	.addOutput(<artisanworktables:worktable:14>)
 	.addTool(carver, 1)
+	.create();
+RecipeBuilder.get("engineer")
+	.setName("AW_ChemistWorktable")
+	.setShaped([
+		[<actuallyadditions:block_misc:2>, <ore:plateElectrum>, <actuallyadditions:block_misc:2>],
+		[<ore:blockGlass>, _wt, <ore:blockGlass>],
+		[plateSteel, <forestry:wood_pulp>, plateSteel]
+	])
+	.addOutput(<artisanworktables:worktable:9>)
+	.addTool(hammer, 1)
 	.create();
 	
 //crushing table
@@ -413,4 +428,82 @@ RecipeBuilder.get("engineer")
 	.create();
 	
 //silicon
+RecipeBuilder.get("chemist")
+	.setName("RV_QuartzMix")
+	.setShapeless([<ore:dustQuartz>, <ore:dustCertusQuartz>, <ore:dustQuartzBlack>])
+	.setFluid(<liquid:water>*1000)
+	.addOutput(<contenttweaker:quartz_mix>*3)
+	.addTool(beaker, 1)
+	.create();
 furnace.remove(<ore:itemSilicon>);
+Centrifuge.addRecipe([<appliedenergistics2:material:5> % 75], <contenttweaker:quartz_mix>, 10);
+
+//redstone alloy
+Alloy.removeRecipe(<liquid:redstone_alloy>);
+RecipeBuilder.get("chemist")
+	.setName("EIO_RedstoneAlloy")
+	.setShaped([
+		[<minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>],
+		[<appliedenergistics2:material:5>, <appliedenergistics2:material:5>, <appliedenergistics2:material:5>],
+		[<minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>]
+	])
+	.addOutput(<contenttweaker:redstone_alloy_dust>)
+	.addTool(mortar, 1)
+	.create();
+furnace.addRecipe(<enderio:item_alloy_ingot:3>, <contenttweaker:redstone_alloy_dust>);
+Melting.addRecipe(<liquid:redstone_alloy>*144, <contenttweaker:redstone_alloy_dust>);
+	
+//conductive iron
+Alloy.removeRecipe(<liquid:conductive_iron>);
+RecipeBuilder.get("chemist")
+	.setName("EIO_ConductiveIron")
+	.setShaped([
+		[null, <actuallyadditions:item_crystal>, null],
+		[<actuallyadditions:item_crystal>, <ore:dustIron>, <actuallyadditions:item_crystal>],
+		[null, <actuallyadditions:item_crystal>, null]
+	])
+	.addOutput(<contenttweaker:conductive_iron_dust>)
+	.addTool(mortar, 1)
+	.create();
+furnace.addRecipe(<enderio:item_alloy_ingot:4>, <contenttweaker:conductive_iron_dust>);
+Melting.addRecipe(<liquid:conductive_iron>*144, <contenttweaker:conductive_iron_dust>);
+
+//conduit binder
+recipes.remove(<enderio:item_material:22>);
+RecipeBuilder.get("chemist")
+	.setName("EIO_ConduitBinderComposite")
+	.setShapeless([<ic2:misc_resource:4>, <appliedenergistics2:material:5>, <forestry:wood_pulp>, <buildinggadgets:constructionpaste>])
+	.addOutput(<enderio:item_material:22>*3)
+	.addTool(mortar, 1)
+	.create();
+	
+//energy conduit
+recipes.remove(<enderio:item_power_conduit>);
+RecipeBuilder.get("engineer")
+	.setName("EIO_ConduitEnergyT1")
+	.setShaped([
+		[<enderio:item_material:4>, <enderio:item_material:4>, <enderio:item_material:4>],
+		[wire, <enderio:item_alloy_ingot:4>, wire],
+		[<enderio:item_material:4>, <enderio:item_material:4>, <enderio:item_material:4>]
+	])
+	.addOutput(<enderio:item_power_conduit>*3)
+	.create();
+	
+//redstone conduit
+recipes.remove(<projectred-transmission:wire>);
+RecipeBuilder.get("blacksmith")
+	.setName("PR_Wire")
+	.setShapeless([<enderio:item_alloy_ingot:3>])
+	.addOutput(<projectred-transmission:wire>)
+	.addTool(cutter, 1)
+	.create();
+recipes.remove(<enderio:item_redstone_conduit>);
+RecipeBuilder.get("engineer")
+	.setName("EIO_ConduitRedstone")
+	.setShaped([
+		[<enderio:item_material:4>, <enderio:item_material:4>, <enderio:item_material:4>],
+		[<projectred-transmission:wire>, <projectred-transmission:wire>, <projectred-transmission:wire>],
+		[<enderio:item_material:4>, <enderio:item_material:4>, <enderio:item_material:4>]
+	])
+	.addOutput(<enderio:item_redstone_conduit>*3)
+	.create();
