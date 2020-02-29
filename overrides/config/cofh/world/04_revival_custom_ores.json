@@ -1,0 +1,339 @@
+{
+    "populate": {
+        "blackquartz": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "actuallyadditions:block_misc",
+                    "properties": {
+                        "type": "ore_black_quartz"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 9
+            },
+            "cluster-count": 6,
+            "min-height": 8,
+            "max-height": 52,
+            "retrogen": false,
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "amethyst": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": "bewitchment:amethyst_ore",
+                "material": "minecraft:stone",
+                "cluster-size": 2
+            },
+            "cluster-count": 4,
+            "min-height": 13,
+            "max-height": 46,
+            "retrogen": false,
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "garnet": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": "bewitchment:garnet_ore",
+                "material": "minecraft:stone",
+                "cluster-size": 2
+            },
+            "cluster-count": 4,
+            "min-height": 13,
+            "max-height": 46,
+            "retrogen": false,
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "opal": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": "bewitchment:opal_ore",
+                "material": "minecraft:stone",
+                "cluster-size": 2
+            },
+            "cluster-count": 4,
+            "min-height": 13,
+            "max-height": 46,
+            "retrogen": false,
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "apatite": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "forestry:resources",
+                    "properties": {
+                        "resource": "apatite"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 16
+            },
+            "cluster-count": 8,
+            "min-height": 48,
+            "max-height": 128,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "tungsten": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": [{
+                        "name": "magneticraft:ores",
+                        "properties": {
+                            "ore_type": "tungsten"
+                        },
+                        "weight": 50
+                    },
+                    {
+                        "name": "nuclearcraft:ore",
+                        "properties": {
+                            "type": "lithium"
+                        },
+                        "weight": 50
+                    }
+                ],
+                "material": "minecraft:stone",
+                "cluster-size": 6
+            },
+            "cluster-count": 4,
+            "min-height": 0,
+            "max-height": 30,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "pyrite_nether": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "magneticraft:ores",
+                    "properties": {
+                        "ore_type": "pyrite"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 10
+            },
+            "cluster-count": 8,
+            "min-height": 0,
+            "max-height": 30,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    1
+                ]
+            }
+        },
+        "osmium": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": [{
+                    "name": "mekanism:oreblock",
+                    "properties": {
+                        "type": "osmium"
+                    },
+                    "weight": 40
+                }, {
+                    "name": "thermalfoundation:ore",
+                    "properties": {
+                        "type": "iridium"
+                    },
+                    "weight": 60
+                }],
+                "material": "minecraft:stone",
+                "cluster-size": 4
+            },
+            "cluster-count": 1,
+            "min-height": 5,
+            "max-height": 25,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "uranium": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "nuclearcraft:ore",
+                    "properties": {
+                        "type": "uranium"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 6
+            },
+            "cluster-count": 4,
+            "min-height": 5,
+            "max-height": 40,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "thorium": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "nuclearcraft:ore",
+                    "properties": {
+                        "type": "thorium"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 6
+            },
+            "cluster-count": 4,
+            "min-height": 25,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "magnesium": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "nuclearcraft:ore",
+                    "properties": {
+                        "type": "magnesium"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 6
+            },
+            "cluster-count": 4,
+            "min-height": 36,
+            "max-height": 70,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "boron": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": {
+                    "name": "nuclearcraft:ore",
+                    "properties": {
+                        "type": "magnesium"
+                    }
+                },
+                "material": "minecraft:stone",
+                "cluster-size": 6
+            },
+            "cluster-count": 4,
+            "min-height": 36,
+            "max-height": 70,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        },
+        "titanium": {
+            "enabled": "true",
+            "distribution": "uniform",
+            "generator": {
+                "block": [{
+                        "name": "libvulpse:ore0",
+                        "properties": {
+                            "variant": 8
+                        },
+                        "weight": 40
+                    },
+                    {
+                        "name": "thermalfoundation:ore",
+                        "properties": {
+                            "type": "aluminum"
+                        },
+                        "weight": 60
+                    }
+                ],
+                "material": "minecraft:stone",
+                "cluster-size": 4
+            },
+            "cluster-count": 2,
+            "min-height": 5,
+            "max-height": 25,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "blacklist",
+                "value": [-1,
+                    1
+                ]
+            }
+        }
+    }
+}
