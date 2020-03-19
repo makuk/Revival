@@ -1,3 +1,4 @@
+#priority 999
 #loader contenttweaker
 import mods.contenttweaker.VanillaFactory;
 
@@ -40,3 +41,11 @@ var BlueMetal = VanillaFactory.createItem("blue_metal");
 BlueMetal.register();
 var PurpleMetal = VanillaFactory.createItem("purple_metal");
 PurpleMetal.register();
+
+//wooden plate
+var WoodenPlate = VanillaFactory.createItem("wooden_plate");
+WoodenPlate.register();
+
+//reinforced stick
+var ReinforcedStick = VanillaFactory.createItem("reinforced_stick");
+ReinforcedStick.register();

@@ -1,4 +1,4 @@
-#priority 998
+#priority 997
 
 ##imports
 import crafttweaker.item.IIngredient;
@@ -7,10 +7,12 @@ import crafttweaker.liquid.ILiquidStack;
 import mods.actuallyadditions.Crusher as AACrusher;
 import mods.appliedenergistics2.Grinder;
 import mods.extrautils2.Resonator;
-import mods.integrateddynamics.DryingBasin;
-import mods.integrateddynamics.Squeezer;
+//import mods.integrateddynamics.DryingBasin;
+//import mods.integrateddynamics.Squeezer;
 import mods.magneticraft.CrushingTable;
 import mods.magneticraft.SluiceBox;
+import mods.magneticraft.Sieve;
+import mods.nuclearcraft.manufactory;
 import mods.tcomplement.highoven.HighOven;
 import mods.tconstruct.Alloy;
 import mods.tconstruct.Casting;
@@ -29,7 +31,7 @@ Grinder.removeRecipe(<minecraft:iron_ore>);
 Grinder.addRecipe(<ic2:crushed:2>, <minecraft:iron_ore>, 4);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks>, 1.0, <magneticraft:chunks>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material>, 1.0, <thermalfoundation:material>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material>, 1.0, <thermalfoundation:material>, 0.75, null);
 furnace.remove(<ore:ingotIron>, <magneticraft:rocky_chunks>);
 Melting.removeRecipe(<liquid:iron>, <magneticraft:rocky_chunks>);
 HighOven.removeMeltingOverride(<liquid:iron>, <magneticraft:rocky_chunks>);
@@ -46,7 +48,7 @@ Grinder.removeRecipe(<minecraft:gold_ore>);
 Grinder.addRecipe(<ic2:crushed:1>, <minecraft:gold_ore>, 8);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:1>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:1>, 1.0, <magneticraft:chunks:1>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:1>, 1.0, <thermalfoundation:material:1>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material:1>, 1.0, <thermalfoundation:material:1>, 0.75, null);
 furnace.remove(<ore:ingotGold>, <magneticraft:rocky_chunks:1>);
 Melting.removeRecipe(<liquid:gold>, <magneticraft:rocky_chunks:1>);
 HighOven.removeMeltingOverride(<liquid:gold>, <magneticraft:rocky_chunks:1>);
@@ -63,7 +65,7 @@ Grinder.removeRecipe(<thermalfoundation:ore>);
 Grinder.addRecipe(<ic2:crushed>, <thermalfoundation:ore>, 4);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:2>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:2>, 1.0, <magneticraft:chunks:2>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:64>, 1.0, <thermalfoundation:material:64>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material:64>, 1.0, <thermalfoundation:material:64>, 0.75, null);
 furnace.remove(<ore:ingotCopper>, <magneticraft:chunks:2>);
 Melting.removeRecipe(<liquid:copper>, <magneticraft:chunks:2>);
 HighOven.removeMeltingOverride(<liquid:copper>, <magneticraft:chunks:2>);
@@ -80,7 +82,7 @@ Grinder.removeRecipe(<thermalfoundation:ore:1>);
 Grinder.addRecipe(<ic2:crushed:5>, <thermalfoundation:ore:1>, 4);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:13>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:13>, 1.0, <magneticraft:chunks:13>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:65>, 1.0, <thermalfoundation:material:65>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material:65>, 1.0, <thermalfoundation:material:65>, 0.75, null);
 furnace.remove(<ore:ingotTin>, <magneticraft:rocky_chunks:13>);
 Melting.removeRecipe(<liquid:tin>, <magneticraft:rocky_chunks:13>);
 HighOven.removeMeltingOverride(<liquid:tin>, <magneticraft:rocky_chunks:13>);
@@ -97,7 +99,7 @@ Grinder.removeRecipe(<thermalfoundation:ore:2>);
 Grinder.addRecipe(<ic2:crushed:4>, <thermalfoundation:ore:2>, 8);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:12>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:12>, 1.0, <magneticraft:chunks:12>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:66>, 1.0, <thermalfoundation:material:66>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material:66>, 1.0, <thermalfoundation:material:66>, 0.75, null);
 furnace.remove(<ore:ingotSilver>, <magneticraft:rocky_chunks:12>);
 Melting.removeRecipe(<liquid:silver>, <magneticraft:rocky_chunks:12>);
 HighOven.removeMeltingOverride(<liquid:silver>, <magneticraft:rocky_chunks:12>);
@@ -114,7 +116,7 @@ Grinder.removeRecipe(<thermalfoundation:ore:3>);
 Grinder.addRecipe(<ic2:crushed:3>, <thermalfoundation:ore:3>, 4);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:3>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:3>, 1.0, <magneticraft:chunks:3>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:67>, 1.0, <thermalfoundation:material:67>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material:67>, 1.0, <thermalfoundation:material:67>, 0.75, null);
 furnace.remove(<ore:ingotLead>, <magneticraft:rocky_chunks:3>);
 Melting.removeRecipe(<liquid:lead>, <magneticraft:rocky_chunks:3>);
 HighOven.removeMeltingOverride(<liquid:lead>, <magneticraft:rocky_chunks:3>);
@@ -145,7 +147,7 @@ Melting.addRecipe(<liquid:nickel>*144, <jaopca:item_crushednickel>);
 Grinder.removeRecipe(<thermalfoundation:ore:5>);
 SluiceBox.removeRecipe(<magneticraft:rocky_chunks:10>);
 SluiceBox.addRecipe(<magneticraft:rocky_chunks:10>, 1.0, <magneticraft:chunks:10>, 0.15, <minecraft:cobblestone>, true);
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:69>, 1.0, <thermalfoundation:material:69>, 0.75, null);
+//Squeezer.removeRecipesWithOutput(<thermalfoundation:material:69>, 1.0, <thermalfoundation:material:69>, 0.75, null);
 furnace.remove(<ore:ingotNickel>, <magneticraft:rocky_chunks:10>);
 Melting.removeRecipe(<liquid:nickel>, <magneticraft:rocky_chunks:10>);
 HighOven.removeMeltingOverride(<liquid:nickel>, <magneticraft:rocky_chunks:10>);
@@ -160,6 +162,7 @@ Resonator.add(<actuallyadditions:item_misc:5>, <actuallyadditions:item_dust:7>, 
 AACrusher.removeRecipe(<actuallyadditions:item_misc:5>);
 AACrusher.addRecipe(<actuallyadditions:item_dust:7>*2, <actuallyadditions:block_misc:3>);
 AACrusher.addRecipe(<actuallyadditions:item_dust:7>, <actuallyadditions:item_misc:5>);
+manufactory.addRecipe(<actuallyadditions:item_dust:7>, <actuallyadditions:item_misc:5>);
 
 //certus quartz
 AACrusher.removeRecipe(<appliedenergistics2:material>);
@@ -175,7 +178,8 @@ Resonator.add(<minecraft:quartz>, <appliedenergistics2:material:3>, 1200);
 AACrusher.addRecipe(<appliedenergistics2:material:3>*2, <minecraft:quartz_ore>);
 AACrusher.addRecipe(<appliedenergistics2:material:3>, <minecraft:quartz>);
 
-Squeezer.removeRecipesWithOutput(<thermalfoundation:material:70>, 1.0, <thermalfoundation:material:70>, 0.75, null);
+//squeezer
+/*Squeezer.removeRecipesWithOutput(<thermalfoundation:material:70>, 1.0, <thermalfoundation:material:70>, 0.75, null);
 Squeezer.removeRecipesWithOutput(<thermalfoundation:material:72>, 1.0, <thermalfoundation:material:72>, 0.75, null);
 Squeezer.removeRecipesWithOutput(<thermalfoundation:material:770>, null);
 Squeezer.removeRecipesWithOutput(<enderio:item_material:26>, 1.0, <enderio:item_material:26>, 0.75, null);
@@ -183,4 +187,27 @@ Squeezer.removeRecipesWithOutput(<enderio:item_material:27>, 1.0, <enderio:item_
 Squeezer.removeRecipesWithOutput(<enderio:item_material:30>, 1.0, <enderio:item_material:30>, 0.75, null);
 Squeezer.removeRecipesWithOutput(<enderio:item_material:31>, 1.0, <enderio:item_material:31>, 0.75, null);
 Squeezer.removeRecipesWithOutput(<magneticraft:dusts:4>, 1.0, <magneticraft:dusts:4>, 0.75, null);
-Squeezer.removeRecipesWithOutput(<jaopca:item_dustardite>, 1.0, <jaopca:item_dustardite>, 0.75, null);
+Squeezer.removeRecipesWithOutput(<jaopca:item_dustardite>, 1.0, <jaopca:item_dustardite>, 0.75, null);*/
+
+//grinder
+
+//sieve
+val _sd = <ic2:dust:15>;
+Sieve.removeRecipe(<magneticraft:rocky_chunks>);
+Sieve.addRecipe(<magneticraft:rocky_chunks>, <magneticraft:chunks>, 1.0, <thermalfoundation:material:69>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:1>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:1>, <magneticraft:chunks:1>, 1.0, <thermalfoundation:material:64>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:2>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:2>, <magneticraft:chunks:2>, 1.0, <thermalfoundation:material:1>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:13>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:13>, <magneticraft:chunks:13>, 1.0, <magneticraft:dusts:14>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:12>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:12>, <magneticraft:chunks:12>, 1.0, <thermalfoundation:material:67>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:3>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:3>, <magneticraft:chunks:3>, 1.0, <thermalfoundation:material:66>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:10>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:10>, <magneticraft:chunks:10>, 1.0, <thermalfoundation:material:70>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.removeRecipe(<magneticraft:rocky_chunks:7>);
+Sieve.addRecipe(<magneticraft:rocky_chunks:7>, <magneticraft:chunks:7>, 1.0, <nuclearcraft:dust:7>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.addRecipe(<jaopca:item_rockychunkboron>, <jaopca:item_chunkboron>, 1.0, <nuclearcraft:dust:7>, 0.1, _sd, 0.1, 100.0, true);
+Sieve.addRecipe(<jaopca:item_rockychunkmagnesium>, <jaopca:item_chunkmagnesium>, 1.0, <nuclearcraft:dust:5>, 0.1, _sd, 0.1, 100.0, true);
