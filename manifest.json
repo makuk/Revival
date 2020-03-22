@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Revival",
-  "version": "0.0.2.1",
+  "version": "0.0.2.2",
   "author": "kimmakuk",
   "files": [
     {
@@ -191,7 +191,7 @@
     },
     {
       "projectID": 242638,
-      "fileID": 2902679,
+      "fileID": 2897967,
       "required": true
     },
     {
