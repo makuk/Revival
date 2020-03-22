@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Revival",
-  "version": "0.0.2",
+  "version": "0.0.2.1",
   "author": "kimmakuk",
   "files": [
     {
@@ -297,6 +297,11 @@
     {
       "projectID": 278494,
       "fileID": 2845668,
+      "required": true
+    },
+    {
+      "projectID": 282963,
+      "fileID": 2532663,
       "required": true
     },
     {
@@ -720,6 +725,11 @@
       "required": true
     },
     {
+      "projectID": 233255,
+      "fileID": 2560971,
+      "required": true
+    },
+    {
       "projectID": 277938,
       "fileID": 2904594,
       "required": true
@@ -775,6 +785,11 @@
       "required": true
     },
     {
+      "projectID": 69118,
+      "fileID": 2664449,
+      "required": true
+    },
+    {
       "projectID": 261251,
       "fileID": 2638317,
       "required": true
@@ -787,6 +802,11 @@
     {
       "projectID": 32274,
       "fileID": 2888880,
+      "required": true
+    },
+    {
+      "projectID": 241160,
+      "fileID": 2612052,
       "required": true
     },
     {
