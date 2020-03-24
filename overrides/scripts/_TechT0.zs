@@ -100,6 +100,12 @@ recipes.addShaped("TCon_SearedTank", <tconstruct:seared_tank>, [
 	[_sb, <minecraft:bucket>, _sb],
 	[_sb, _sb, _sb]
 ]);
+recipes.remove(<tconstruct:tinker_tank_controller>);
+recipes.addShaped("TCon_TinkerTankController", <tconstruct:tinker_tank_controller>, [
+	[_sb, _sb, _sb],
+	[_sb, <ore:blockGlass>, _sb],
+	[_sb, _sb, _sb]
+]);
 
 //steel
 var manager = HighOven.manageMixRecipe(<liquid:steel>, <liquid:iron>);
