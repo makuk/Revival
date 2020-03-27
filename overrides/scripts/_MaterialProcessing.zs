@@ -79,6 +79,7 @@ for i, ingot in IngotsT1 {
 		.create();
 }
 
+//reinforced stick
 RecipeBuilder.get("carpenter")
 	.setName("CT_ReinforcedStick")
 	.setShaped([
@@ -90,3 +91,6 @@ RecipeBuilder.get("carpenter")
 	.addOutput(<contenttweaker:reinforced_stick>*2)
 	.addTool(<ore:artisansHandsaw>, 1)
 	.create();
+	
+//glass
+<ore:blockGlassColorless>.add(<tconstruct:clear_glass>);
