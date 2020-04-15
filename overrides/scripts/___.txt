@@ -115,3 +115,26 @@ IC2 세미플루이드: 16000eu(64000rf)(16eu/t, 64rf/t)
 
 *가솔린(마그네티)
 써멀 컴프레션 다이나모 (+물): 1,200,000rf(120rf/t)
+
+
+##각 모드별 부품(으로 쓸수있을만한 것들)
+**Actally Additions**
+Basic Coil, Advanced Coil, Battery
+
+**Advanced Rocketry**
+Optical Sensor, Composition Sensor, Mass Detector, *Microwave Transmittor*, Basic Circuit, Advanced Circuit, Tracking Circuit, Control Circuit Board, Item IO Circuit Board, Liquid IO Circuit Board, User Interface, *Iron Saw Blade*, *Basic Lens*, Data Storage Unit, Motor
+
+**Applied Energistics 2**
+*Biometric Card*, *Memory Card*, *Basic Card*, *Advanced Card*, *Capactity Card*, *Crafting Card*, *Fuzzy Card*, *Inverter Card*, *Redstone Card*, *Acceleration Card*, *Wireless Reciever*, *Wireless Booster*
+
+**Binnie's Mods**
+Integrated Circuit Board, Integrated CPU
+
+**Deep Mob Learning**
+*Deep Learner*, Blank Data Model
+
+**Draconic Evolution**
+Draconic Core, Wyvern Core, Awakened Core, Chaotic Core, *Ender Energy Manipulator*
+
+**Ender IO**
+Basic Capacitor, Double-Layer Capacitor, Ocatdic Capacitor, Silver Capacitor, Endergetic Silver Capacitor, Endergised Capacitor, *Crystalline Capacitor*, *Melodic Capacitor*, *Stellar Capacitor*, *Totemic Capacitor*, *Simple Machine Parts*, *Machine Parts*, *Enhanced Machine Parts*, Zombie Electrode, Z-Logic Controller, Frank'N'Zombie, Ender Resonator, Sentient Ender, Skeletal Contractor, Guardian Diode, Tormented Enderman Head, *Redstone (Logic) Filter*

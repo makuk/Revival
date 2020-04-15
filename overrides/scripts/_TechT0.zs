@@ -163,9 +163,6 @@ PlatePresser.addRecipe(<thermalfoundation:material:353>*4, <thermalfoundation:st
 PlatePresser.addRecipe(<thermalfoundation:material:354>*4, <thermalfoundation:storage_alloy:2>);
 PlatePresser.addRecipe(<thermalfoundation:material:355>*4, <thermalfoundation:storage_alloy:3>);
 PlatePresser.addRecipe(<thermalfoundation:material:356>*4, <thermalfoundation:storage_alloy:4>);
-for p in plank.items {
-	PlatePresser.addRecipe(<contenttweaker:wooden_plate>, p);
-}
 
 //cast removal for balance
 Casting.removeTableRecipe(<tconstruct:cast_custom:3>);

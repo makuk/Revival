@@ -2,50 +2,20 @@
 #loader contenttweaker
 import mods.contenttweaker.VanillaFactory;
 
-//quartz mix
-var QuartzMix = VanillaFactory.createItem("quartz_mix");
-QuartzMix.register();
+val itemList = [
+	"quartz_mix", "wooden_plate", "reinforced_stick", "boron_arsenide_dust", "arsenic_ingot", "alugentum_ingot", "galvanized_steel_ingot", "galvanized_steel_dust", "brass_ingot", "brass_dust",
+	"machine_frame_basic", "machine_frame_hardened", "machine_frame_reinforced", "machine_frame_signalum", "machine_frame_resonant", "diamond_grinder",
+	"electrical_steel_dust", "energetic_alloy_dust", "vibrant_alloy_dust", "redstone_alloy_dust", "conductive_iron_dust", "pulsating_iron_dust", "dark_steel_dust", "end_steel_dust", "iron_alloy_dust",
+	"crude_steel_dust", "crystalline_alloy_dust", "melodic_alloy_dust", "stellar_alloy_dust", "crystalline_pink_slime_dust", "energetic_silver_dust", "vivid_alloy_dust",
+	"red_metal", "orange_metal", "yellow_metal", "green_metal", "blue_metal", "indigo_metal", "purple_metal",
+	"crushed_aluminium", "crushed_ardite", "crushed_boron", "crushed_cobalt", "crushed_iridium", "crushed_lithium", 
+	"crushed_magnesium", "crushed_nickel", "crushed_osmium", "crushed_platinum", "crushed_thorium", "crushed_titanium", "crushed_tungsten",
+	"purified_aluminium", "purified_ardite", "purified_boron", "purified_cobalt", "purified_iridium", "purified_lithium", 
+	"purified_magnesium", "purified_nickel", "purified_osmium", "purified_platinum", "purified_thorium", "purified_titanium", "purified_tungsten",
+	"rocky_chunk_boron", "rocky_chunk_lithium", "rocky_chunk_magnesium", "rocky_chunk_platinum", "rocky_chunk_iridium", "rocky_chunk_ardite", "rocky_chunk_thorium", "rocky_chunk_titanium", "rocky_chunk_uranium",
+	"chunk_boron", "chunk_lithium", "chunk_magnesium", "chunk_platinum", "chunk_iridium", "chunk_ardite", "chunk_thorium", "chunk_titanium", "chunk_uranium"
+] as string[];
 
-//ender io dusts
-var ElectricSteelDust = VanillaFactory.createItem("electric_steel_dust");
-ElectricSteelDust.register();
-var EnergeticAlloyDust = VanillaFactory.createItem("energetic_alloy_dust");
-EnergeticAlloyDust.register();
-var VibrantAlloyDust = VanillaFactory.createItem("vibrant_alloy_dust");
-VibrantAlloyDust.register();
-var RestoneAlloyDust = VanillaFactory.createItem("redstone_alloy_dust");
-RestoneAlloyDust.register();
-var ConductiveIronDust = VanillaFactory.createItem("conductive_iron_dust");
-ConductiveIronDust.register();
-var PulsatingIronDust = VanillaFactory.createItem("pulsating_iron_dust");
-PulsatingIronDust.register();
-var DarkSteelDust = VanillaFactory.createItem("dark_steel_dust");
-DarkSteelDust.register();
-var SoulariumDust = VanillaFactory.createItem("soularium_dust");
-SoulariumDust.register();
-var EndSteelDust = VanillaFactory.createItem("end_steel_dust");
-EndSteelDust.register();
-var IronAlloyDust = VanillaFactory.createItem("iron_alloy_dust");
-IronAlloyDust.register();
-
-//rainbow metals
-var RedMetal = VanillaFactory.createItem("red_metal");
-RedMetal.register();
-var OrangeMetal = VanillaFactory.createItem("orange_metal");
-OrangeMetal.register();
-var YellowMetal = VanillaFactory.createItem("yellow_metal");
-YellowMetal.register();
-var GreenMetal = VanillaFactory.createItem("green_metal");
-GreenMetal.register();
-var BlueMetal = VanillaFactory.createItem("blue_metal");
-BlueMetal.register();
-var PurpleMetal = VanillaFactory.createItem("purple_metal");
-PurpleMetal.register();
-
-//wooden plate
-var WoodenPlate = VanillaFactory.createItem("wooden_plate");
-WoodenPlate.register();
-
-//reinforced stick
-var ReinforcedStick = VanillaFactory.createItem("reinforced_stick");
-ReinforcedStick.register();
+for itemName in itemList {
+	VanillaFactory.createItem(itemName).register();
+}

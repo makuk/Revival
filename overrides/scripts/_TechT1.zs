@@ -193,22 +193,22 @@ RecipeBuilder.get("blacksmith")
 	.addOutput(wire*2)
 	.addTool(cutter, 1)
 	.create();
-recipes.remove(<ic2:crafting:5>);
+recipes.remove(<magneticraft:copper_coil>);
 RecipeBuilder.get("basic")
-	.setName("IC2_Coil")
+	.setName("MG_Coil")
 	.setShaped([
 		[wire, wire, wire],
 		[wire, <ore:ingotSteel>, wire],
 		[wire, wire, wire]
 	])
-	.addOutput(<ic2:crafting:5>)
+	.addOutput(<magneticraft:copper_coil>.withTag({}))
 	.create();
 recipes.remove(motor);
 RecipeBuilder.get("basic")
 	.setName("MG_Motor")
 	.setShaped([
 		[plateSteel, plateSteel, null],
-		[<ic2:crafting:5>, <minecraft:redstone>, <minecraft:iron_ingot>],
+		[<magneticraft:copper_coil>, <minecraft:redstone>, <minecraft:iron_ingot>],
 		[plateSteel, plateSteel, null]
 	])
 	.addOutput(motor)
@@ -296,7 +296,7 @@ RecipeBuilder.get("engineer")
 	.setName("MG_ElectricFurnace")
 	.setShaped([
 		[null, null, null],
-		[<ic2:crafting:5>, <magneticraft:brick_furnace>, <ic2:crafting:5>],
+		[<magneticraft:copper_coil>, <magneticraft:brick_furnace>, <magneticraft:copper_coil>],
 		[<ore:plateCopper>, <ore:plateCopper>, <ore:plateCopper>]
 	])
 	.setMirrored()
@@ -422,9 +422,9 @@ AtomicReconstructor.removeRecipe(<actuallyadditions:item_crystal:2>);
 AtomicReconstructor.removeRecipe(<actuallyadditions:item_crystal:3>);
 AtomicReconstructor.removeRecipe(<actuallyadditions:item_crystal:4>);
 AtomicReconstructor.removeRecipe(<actuallyadditions:item_crystal:5>);
-AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal>, <minecraft:redstone>, 10000);
+AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal>, <deepmoblearning:soot_covered_redstone>, 10000);
 AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal:1>, <minecraft:dye:4>, 10000);
-AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal:3>, <minecraft:coal>, 10000);
+AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>, 10000);
 AtomicReconstructor.addRecipe(<actuallyadditions:item_crystal:5>, <thermalfoundation:material:160>, 10000);
 	
 //fluxduct
@@ -443,7 +443,7 @@ RecipeBuilder.get("engineer")
 recipes.remove(coil);
 Carpenter.addRecipe(coil, [
 	[<actuallyadditions:item_crystal:5>, <actuallyadditions:item_crystal>, <actuallyadditions:item_crystal:5>],
-	[<actuallyadditions:item_misc:5>, <ic2:crafting:5>, <actuallyadditions:item_misc:5>],
+	[<actuallyadditions:item_misc:5>, <magneticraft:copper_coil>, <actuallyadditions:item_misc:5>],
 	[<actuallyadditions:item_crystal:5>, <actuallyadditions:item_crystal>, <actuallyadditions:item_crystal:5>]
 ], 30);
 
@@ -460,7 +460,7 @@ RecipeBuilder.get("engineer")
 	.addTool(driver, 1)
 	.create();
 recipes.remove(<extrautils2:machine>.withTag({Type: "extrautils2:generator"}));
-RecipeBuilder.get("engineer")
+/*RecipeBuilder.get("engineer")
 	.setName("ExU_GeneratorFurnace")
 	.setShaped([
 		[<ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>],
@@ -468,6 +468,17 @@ RecipeBuilder.get("engineer")
 		[<minecraft:redstone>, <magneticraft:thermopile>, <minecraft:redstone>]
 	])
 	.addOutput(<extrautils2:machine>.withTag({Type: "extrautils2:generator"}))
+	.addTool(spanner, 1)
+	.create();*/
+	
+RecipeBuilder.get("engineer")
+	.setName("ExU_GeneratorSurvival")
+	.setShaped([
+		[<ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>],
+		[<ore:ingotSteel>, <extrautils2:machine>, <ore:ingotSteel>],
+		[<minecraft:redstone>, <magneticraft:thermopile>, <minecraft:redstone>]
+	])
+	.addOutput(<extrautils2:machine>.withTag({Type: "extrautils2:generator_survival"}))
 	.addTool(spanner, 1)
 	.create();
 	
@@ -733,21 +744,21 @@ RecipeBuilder.get("engineer")
 	
 //manufactory recipes
 manufactory.removeAllRecipes();
-manufactory.addRecipe(<minecraft:redstone>, <actuallyadditions:item_crystal>);
-manufactory.addRecipe(<minecraft:dye:4>, <actuallyadditions:item_crystal:1>);
-manufactory.addRecipe(<minecraft:diamond>, <actuallyadditions:item_crystal:2>);
-manufactory.addRecipe(<minecraft:coal>, <actuallyadditions:item_crystal:3>);
-manufactory.addRecipe(<minecraft:emerald>, <actuallyadditions:item_crystal:4>);
-manufactory.addRecipe(<ore:ingotSteel>, <actuallyadditions:item_crystal:5>);
-manufactory.addRecipe(<ore:plateCopper>, <magneticraft:crafting:3>*4);
-manufactory.addRecipe(<minecraft:sand>, <buildinggadgets:constructionblockpowder>);
-manufactory.addRecipe(<contenttweaker:quartz_mix>, <appliedenergistics2:material:5>);
+manufactory.addRecipe([<minecraft:redstone>, <actuallyadditions:item_crystal>, 0.2, 0.5, 0.0]);
+manufactory.addRecipe([<minecraft:dye:4>, <actuallyadditions:item_crystal:1>, 0.2, 0.5, 0.0]);
+manufactory.addRecipe([<minecraft:diamond>, <actuallyadditions:item_crystal:2>, 1.5, 2.0, 0.0]);
+manufactory.addRecipe([<extrautils2:ingredients:4>, <actuallyadditions:item_crystal:3>, 0.2, 0.5, 0.0]);
+manufactory.addRecipe([<minecraft:emerald>, <actuallyadditions:item_crystal:4>, 1.5, 2.0, 0.0]);
+manufactory.addRecipe([<ore:ingotSteel>, <actuallyadditions:item_crystal:5>, 0.2, 0.5, 0.0]);
+manufactory.addRecipe([<ore:plateCopper>, <magneticraft:crafting:3>*4, 0.5, 1.0, 0.0]);
+manufactory.addRecipe([<contenttweaker:quartz_mix>, <appliedenergistics2:material:5>, 0.2, 0.5, 0.0]);
 
 //graphite
 furnace.remove(<nuclearcraft:ingot:8>);
 Casting.removeTableRecipe(<nuclearcraft:ingot:8>);
 Centrifuge.addRecipe([<nuclearcraft:dust:8>], <thermalfoundation:material:768>, 20);
-manufactory.addRecipe(<nuclearcraft:dust:8>, <nuclearcraft:ingot:8>);
+Centrifuge.addRecipe([<nuclearcraft:dust:8>], <thermalfoundation:material:769>, 20);
+manufactory.addRecipe([<nuclearcraft:dust:8>, <nuclearcraft:ingot:8>, 1.0, 1.0, 0.0]);
 
 //alloy furnace
 /*recipes.remove(<actuallyadditions:block_furnace_double>);
@@ -772,6 +783,3 @@ RecipeBuilder.get("engineer")
 	.addOutput(<nuclearcraft:alloy_furnace_idle>)
 	.addTool(driver, 1)
 	.create();
-
-//red metal
-alloy_furnace.addRecipe(<enderio:item_alloy_ingot:3>, <enderio:item_alloy_ingot:4>, <contenttweaker:red_metal>*2);
